@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_URI = axios.create({ baseURL: "http://localhost:8080/admin" });
+const API_URI = axios.create({
+  baseURL: "https://projectbundokapi.onrender.com/admin",
+});
 
 API_URI.interceptors.request.use((req) => {
   if (localStorage.getItem("admin")) {
